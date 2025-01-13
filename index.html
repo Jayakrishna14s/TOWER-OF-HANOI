@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tower of Hanoi</title>
+    <!-- Google Fonts: Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- add icon link -->
+    <link rel="icon" href="assets/Icon.png" type="image/png">
+</head>
+
+<body>
+
+    <div id="Page1" class="full-window hidden"> <!--Main Page-->
+        <span class="header1">
+            <h1>Tower of Hanoi</h1>
+        </span>
+        <div class="content1">
+            <div class="buttons1">
+                <button onclick="Page12()">Let's go</button>
+                <button onclick="exitGame()">Exit</button>
+            </div>
+            <div id="rules1">
+                <h2>
+                    Game rules
+                </h2>
+                <ul>
+                    <li>Move one disk at a time.</li>
+                    <li>Larger disks cannot be placed on smaller disks.</li>
+                    <li>Disks are stacked in ascending order on rods.</li>
+                    <li>Only the top disk of a rod can be moved.</li>
+                    <li>Solve recursively.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="Page2" class="hidden">
+        <div class="buttons2">
+            <button onclick="Page23()">Start</button>
+            <!--  <button onclick="Page24()">Solution</button>    -->
+            <button onclick="page2toRules()">Rules</button>
+            <button onclick="Page21()">Back</button>
+        </div>
+    </div>
+
+    <div id="Page3" class="hidden">
+        <div class="lt3-back">
+            <button onclick="Page32()">Back</button>
+        </div>
+
+        <div class="Buttons38a">
+            <button onclick="SetNumberOfDiscs(3)">Three</button>
+            <button onclick="SetNumberOfDiscs(4)">Four</button>
+            <button onclick="SetNumberOfDiscs(5)">Five</button>
+            <button onclick="SetNumberOfDiscs(6)">Six</button>
+        </div>
+
+        <div class="Buttons38b">
+            <button onclick="SetNumberOfDiscs(7)">Seven</button>
+            <button onclick="SetNumberOfDiscs(8)">Eight</button>
+            <button onclick="SetNumberOfDiscs(9)">Nine</button>
+            <button onclick="SetNumberOfDiscs(10)">Ten</button>
+        </div>
+
+        <div id="introduction3">
+            <h2>
+                How to play?
+            </h2>
+            <ul>
+                <li>Game is played moving discs from one rod to other rod</li>
+                <li>Game consists of 3 rods</li>
+                <li>Select a number to choose number of discs to play with</li>
+                <li>Solve recursively following the rules</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="Rules" class="hidden" onclick="pageRulesTo2()">
+        <div id="rules2" onclick="pageRulesTo2()">
+
+            <span class="header2">
+                <h2>Rules</h2>
+            </span>
+            <ul class="RulesList">
+                <li>Each move involves selection of two rods</li>
+                <li>Disc moves from first selected rod to second selected rod</li>
+                <li>Selection of rods are done by mouse clicks on respective rods</li>
+                <li>For n number of discs, minimum number of moves to move all discs from one rod to another is
+                    2^(Number of discs) - 1</li>
+                <li>Larger disks cannot be placed on smaller disks.</li>
+                <li>Only the top disk of a rod can be moved.</li>
+            </ul>
+            <div class="RulesTo2">
+                <h2>Click anywhere on the Rules container to go back</h2>
+            </div>
+        </div>
+    </div>
+
+    <div id="game" class="hidden"> <!--Main Page-->
+        <div class="gbuttons">
+            <div class="gbutton">
+                <button onclick="gametopage2()">Back</button>
+                <button onclick="gametoreset()">Reset</button>
+            </div>
+        </div>
+
+        <div class="moves">
+            <span class="Moves">
+                <u>Moves</u>
+            </span>
+            <div id="movesCount"></div>
+            <div class="undoButton">
+                <button onclick="undo()">Undo</button>
+            </div>
+        </div>
+
+        <div class="TowerOfHanoi">
+            <h2>
+                <u>
+                    Tower of Hanoi
+                </u>
+            </h2>
+
+            <div class="rods">
+                <div class="rod" onclick="rodClick(1)">
+                    <div class="location" id="location1"></div>
+                    <div class="location" id="location2"></div>
+                    <div class="location" id="location3"></div>
+                    <div class="location" id="location4"></div>
+                    <div class="location" id="location5"></div>
+                    <div class="location" id="location6"></div>
+                    <div class="location" id="location7"></div>
+                    <div class="location" id="location8"></div>
+                    <div class="location" id="location9"></div>
+                    <div class="location" id="location10"></div>
+                </div>
+                <div class="rod" onclick="rodClick(2)">
+                    <div class="location" id="location11"></div>
+                    <div class="location" id="location12"></div>
+                    <div class="location" id="location13"></div>
+                    <div class="location" id="location14"></div>
+                    <div class="location" id="location15"></div>
+                    <div class="location" id="location16"></div>
+                    <div class="location" id="location17"></div>
+                    <div class="location" id="location18"></div>
+                    <div class="location" id="location19"></div>
+                    <div class="location" id="location20"></div>
+                    <div class="base" id="rectanglebase"></div>
+                    <div id="textbox"></div>
+                </div>
+                <div class="rod" onclick="rodClick(3)">
+                    <div class="location" id="location21"></div>
+                    <div class="location" id="location22"></div>
+                    <div class="location" id="location23"></div>
+                    <div class="location" id="location24"></div>
+                    <div class="location" id="location25"></div>
+                    <div class="location" id="location26"></div>
+                    <div class="location" id="location27"></div>
+                    <div class="location" id="location28"></div>
+                    <div class="location" id="location29"></div>
+                    <div class="location" id="location30"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="winlost" class="hidden">
+        <h1></h1>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

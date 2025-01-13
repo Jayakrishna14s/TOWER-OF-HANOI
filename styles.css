@@ -1,0 +1,557 @@
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'WelcomeFont';
+    src: url('assets/ttffont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SuperMario';
+    src: url('assets/SuperMario.ttf') format('truetype');
+}
+    
+.hidden {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff38;
+    background-size: cover;
+}
+
+.full-window {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Page1 {
+    text-align: center;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0000004d;
+    color: #ecf0f1;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #88dba438;
+    background-size: cover;
+}
+
+.header1 {
+    margin-bottom: 3px;
+    font-size: 45px;
+    display: inline-block;
+    position: relative;
+    padding: 4px;
+}
+
+.header1 h1 {
+    font-family: 'WelcomeFont', sans-serif; /* Apply the custom font to the .header class */
+    text-align: center;
+    border-bottom: 2px solid #055d25; /* Change 'red' to your desired color */
+    padding-bottom: 1px; /* Adjust the padding to control the gap between text and underline */
+    display: inline; /* Ensures that the underline only covers the width of the text */
+    color: #055d25; /* Set text color to a dark shade */
+    margin: 0; /* Remove default margin */
+}
+
+.buttons1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Add this line to vertically center the buttons */
+    height: 50%; /* Add this line to make sure the buttons take up the full height */
+    font-family: 'WelcomeFont', sans-serif;
+}
+
+.buttons1 button {
+    width: 150px;
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff; /* Initial background color */
+    color: #055d25;
+    font-family: 'WelcomeFont', sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.buttons1 button:hover {
+    background-color: #055d25; /* Hover background color */
+    color: #ffffff;
+}
+
+#rules1 {
+    background-color: #23ea2d67;
+    padding: 2px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #ffffff;
+    text-align: left; /* Left-align the rules text */
+    font-size: 25px;
+    font-family: 'WelcomeFont', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+
+#rules1 h2 {
+    font-size: 30px;
+    padding: 1px;
+    font-family: 'WelcomeFont', sans-serif;
+    color: #055d25;
+    text-align: center;
+}
+
+
+#Page2 {
+    text-align: center;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0000004d;
+    color: #ecf0f1;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #ee756038;
+    background-size: cover;
+}
+
+.buttons2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Add this line to vertically center the buttons */
+    height: 100%; /* Add this line to make sure the buttons take up the full height */
+    font-family: 'WelcomeFont', sans-serif;
+}
+
+.buttons2 button {
+    width: 150px;
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #d92121;
+    font-family: 'WelcomeFont', sans-serif;
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center;
+    transition: background 0.3s ease;
+}
+
+.buttons2 button:hover {
+    color: #ffffff;
+    background-color: #d92121;
+    background-size: cover;
+    background-position: center;
+    font-family: 'WelcomeFont', sans-serif;
+}
+
+#Page3 {
+    text-align: center;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0000004d;
+    color: #ecf0f1;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #88dba438;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.lt3-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Add this line to vertically center the buttons */
+    height: 30%; /* Add this line to make sure the buttons take up the full height */
+    font-family: 'WelcomeFont', sans-serif;
+}
+
+.lt3-back button {
+    width: 150px;
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000; /* Initial background color */
+    color: #ffffff;
+    font-family: 'WelcomeFont', sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.lt3-back button:hover {
+    background-color: #b0b4b3; /* Hover background color */
+    color: #000000;
+}
+
+.Buttons38a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Add this line to vertically center the buttons */
+    height: 13%; /* Add this line to make sure the buttons take up the full height */
+    font-family: 'WelcomeFont', sans-serif;
+}
+
+.Buttons38a button {
+    width: 150px;
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff; /* Initial background color */
+    color: #055d25;
+    font-family: 'WelcomeFont', sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.Buttons38a button:hover {
+    background-color: #055d25; /* Hover background color */
+    color: #ffffff;
+}
+
+
+.Buttons38b {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Add this line to vertically center the buttons */
+    height: 13%; /* Add this line to make sure the buttons take up the full height */
+    font-family: 'WelcomeFont', sans-serif;
+}
+
+.Buttons38b button {
+    width: 150px;
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff; /* Initial background color */
+    color: #055d25;
+    font-family: 'WelcomeFont', sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.Buttons38b button:hover {
+    background-color: #055d25; /* Hover background color */
+    color: #ffffff;
+}
+
+#introduction3 {
+    background-color: #23ea2d67;
+    padding: 1px;
+    border-radius: 5px;
+    margin-top: 35px;
+    color: #ffffff;
+    text-align: left; /* Left-align the rules text */
+    font-size: 25px;
+    font-family: 'WelcomeFont', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+}
+
+
+#introduction3 h2 {
+    font-size: 30px;
+    padding: 1px;
+    font-family: 'WelcomeFont', sans-serif;
+    color: #055d25;
+    text-align: center;
+}
+
+
+#game {
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0000004d;
+    color: #ecf0f1;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #88dba438;
+    background-size: cover;
+}
+
+.gbuttons {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center; /* Centers the buttons vertically */
+    height: 25%;
+    position: fixed; /* Position fixed to keep it fixed on the viewport */
+    top: 2%; /* Set top position to 50% to center vertically */
+    transform: translateY(-10%); /* Center vertically */
+    left: 50%; /* Set left position to 50% to center horizontally */
+    transform: translateX(-140%); /* Center horizontally */
+}
+
+.gbutton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space between buttons */
+    font-family: 'WelcomeFont', sans-serif;
+}
+
+.gbutton button  {
+    width: 100px;
+    padding: 10px 20px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff; /* Initial background color */
+    color: #055d25;
+    font-family: 'WelcomeFont', sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin: 0 50%; /* Adjust the margin to increase or decrease the gap */
+}
+
+.gbutton button:hover {
+    background-color: #055d25; /* Hover background color */
+    color: #ffffff;
+}
+
+.moves {
+    width: 10%; /* Set width to fit the content */
+    padding: 8px; /* Add padding */
+    border: 2px solid #055d25; /* Set border to green */
+    background-color: #ffffff; /* Set background color to white */
+    color: #055d25; /* Set text color to green */
+    font-family: "WelcomeFont", sans-serif; /* Set font to Welcome */
+    text-align: center; 
+    position: fixed ;    /* Position relative to the nearest positioned ancestor */
+    top: 6%; /* Adjust top position */
+    left: 45%;  
+}
+
+.moves .Moves {
+    font-size: 150%; /* Adjust font size of "Moves" text */
+    margin-bottom: 100px;
+}
+
+.moves .Moves u {
+    text-decoration: underline; /* Underline the text */
+    text-decoration-thickness: 2px; /* Adjust the thickness of the underline */
+    text-underline-offset: 4px; /
+}
+
+.moves #movesCount {
+    font-size: 150%; /* Adjust font size */
+    font-family: 'Playfair Display', serif;
+    margin-top: 2px;
+}
+
+.undoButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Add this line to vertically center the buttons */
+    height: 45%; /* Add this line to make sure the buttons take up the full height */
+    font-family: 'WelcomeFont', sans-serif;
+}
+
+.undoButton button {
+    margin-top: 10px;
+    font-size: 150%;
+    padding: 2% 10%;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    color: #d92121;
+    font-family: 'WelcomeFont', sans-serif;
+    background-color: rgb(241, 222, 222);
+    background-size: cover;
+    background-position: center;
+    transition: background 0.3s ease;
+}
+
+.undoButton button:hover {
+    color: #06643b;
+    background-color: rgb(218, 235, 233);
+    background-size: cover;
+    background-position: center;
+    font-family: 'WelcomeFont', sans-serif;
+}
+
+.TowerOfHanoi {
+    width: 80%; /* Set width to fit the content */
+    padding: 10px; /* Add padding */
+    border: 2px solid #055d25; /* Set border to green */
+    background-color: #ffffff; /* Set background color to white */
+    color: #055d25; /* Set text color to green */
+    font-family: "WelcomeFont", sans-serif; /* Set font to Welcome */
+    text-align: center; 
+    position: absolute; /* Position relative to the nearest positioned ancestor */
+    top: 27.5%; /* Adjust top position */
+    left: 10%;
+    height: 62.5%;
+    overflow: hidden;  
+}
+
+.TowerOfHanoi h2 {
+    margin-top: 0.1%;
+}
+
+.TowerOfHanoi h2 u {
+    text-decoration: underline; /* Underline the text */
+    text-decoration-thickness: 2px; /* Adjust the thickness of the underline */
+    text-underline-offset: 4px; /
+}
+
+.rods {
+    display: flex;
+    justify-content: center;
+    height: 75%; /* Adjust height as needed */
+    margin-top: 0.5%; /* Add margin to separate rods from header */
+}
+
+.rod {
+    position: relative;
+    width: 10px; /* Adjust width as needed */
+    background-color: #000000; /* Set rod color */
+    margin: 0 15%;  
+}
+
+
+.location { 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 9.5%; /* Adjust height of points as needed */
+    border-radius: 5%; /* Makes points circular */
+    opacity:1;
+}
+
+.base {
+    display: flex;
+    justify-content: center;
+    height: 10%; /* Adjust height as needed */
+    margin-top: 20%; /* Add margin to separate rods from header */
+}
+
+#rectanglebase {
+    position: relative; /* Position the rectangle relative to its closest positioned ancestor */
+    left: 50%; /* Adjust left position */
+    transform: translateX(-50%); /* Center the rectangle horizontally */
+    width: 11000%; /* Adjust width */
+    height: 15px; /* Adjust height */
+    background-color: #b3a1a1; /* Set rectangle color */
+    top : 99%;
+    z-index: 999;
+}
+
+#textbox {
+    display: inline-block; /* Display as inline-block */
+    padding: 10px; /* Add padding */
+    border: 1px solid #ffffff00; /* Set border to green */
+    background-color: #ffffff00; /* Set background color to white */
+    color: #035864; /* Set text color to green */
+    font-family: 'WelcomeFont', sans-serif; /* Set font to Welcome */
+    text-align: center; 
+    font-size: 22.5px;
+    position: absolute; /* Position relative to the nearest positioned ancestor */
+    top: 106%; /* Adjust top position */
+    transform: translateX(-50%); 
+    height: auto; /* Set height to auto */
+    width: 1000%; /* Set width to auto */
+}
+
+#winlost {
+        margin: 0;
+        padding: 0;
+        background-color: black; /* Entire page in black color */
+        color: white; /* Text color white */
+        font-family: 'SuperMario', sans-serif; /* Font family */
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 100vh; /* Full viewport height */
+        font-size: 30px;
+}
+
+#Rules {
+    text-align: center;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0000004d;
+    color: #ecf0f1;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #88dba438;
+    background-size: cover;
+}
+
+#rules2 {
+    background-color: #23ea2d67;
+    padding: 2px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #ffffff;
+    text-align: left; /* Left-align the rules text */
+    font-size: 35px;
+    font-family: 'WelcomeFont', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 70%;
+    overflow: scroll;
+}
+
+
+#rules2 h2 {
+    font-size: 50px;
+    padding: 1px;
+    font-family: 'WelcomeFont', sans-serif;
+    color: #055d25;
+    text-align: center;
+}
+
+#rules2 .RulesTo2 h2 {
+    color: rgb(119, 78, 186); /* Set text color to red */
+    font-size: 40px; /* Set font size to 70px */
+}
